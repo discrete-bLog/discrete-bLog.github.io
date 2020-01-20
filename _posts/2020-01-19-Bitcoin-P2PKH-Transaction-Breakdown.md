@@ -1,6 +1,5 @@
 ---
-layout: post
-author: RJ Rybarczyk
+author: rj
 title: Bitcoin P2PKH Transaction Breakdown
 ---
 
