@@ -1,7 +1,7 @@
 ---
-title: Authors
+title: authors
 ---
-<h1>Authors</h1>
+<h1>authors</h1>
 
 <ul>
   {% for author in site.authors %}

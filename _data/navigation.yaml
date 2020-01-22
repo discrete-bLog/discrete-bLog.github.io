@@ -1,4 +1,4 @@
-- name: Home
+- name: home
   link: /
-- name: Authors
+- name: authors
   link: /authors.html
