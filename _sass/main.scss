@@ -1,3 +1,27 @@
-.current {
-    color: green;
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: white;
+$background-color: rgb(60, 60, 60);
+
+body {
+    font: 200% $font-stack;
+    background-color: $background-color;
+    color: $primary-color;
 }
+
+a:link {
+    color: lightblue;
+}
+
+a:visited {
+    color: lightblue;
+}
+
+a:active {
+    color: lightpink;
+}
+
+a:hover {
+    color:mediumseagreen;
+}
+
