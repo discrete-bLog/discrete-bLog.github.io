@@ -2,10 +2,12 @@
 
 
 #### Jekyll Commands
+
 ```
-$ jekyll build      # builds `_site` dir
-$ jekyll serve      # rebuild on save & runs on http://localhost:4000
-$ jekyll clean      # remove `_site` dir
+$ gem install jekyll bundler    # install jekyll
+$ jekyll build                  # builds `_site` dir
+$ jekyll serve                  # rebuild on save & runs on http://localhost:4000
+$ jekyll clean                  # remove `_site` dir
 ```
 
 Using the justfile:
