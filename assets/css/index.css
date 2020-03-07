@@ -28,6 +28,10 @@ h1 {
   margin-bottom: .5rem;
 }
 
+h2.landing {
+  margin-left: 150px
+}
+
 time {
   color: #888;
 }
@@ -56,17 +60,18 @@ img {
 
 /* Lists Begin */
 ul, ol, dl {
-  padding-left: 2rem;
+  margin-left: 150px;
   list-style-type: none;
 }
 
 ul, li, dt, dd {
-  padding-left: 2rem;
   line-height: 1.5;
 }
 
 dd {
   text-transform: uppercase;
+  font-size: 75%;
+  color: #888;
 }
 
 dt {
@@ -78,3 +83,7 @@ dd {
 }
 /* Lists End */
 
+p.author {
+  text-transform: uppercase;
+  color: #888;
+}
