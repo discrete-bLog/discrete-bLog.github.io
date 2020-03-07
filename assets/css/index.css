@@ -18,18 +18,22 @@ header {
   margin-bottom: 1.5rem;
 }
 
+h1.landing {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: .5rem;
+}
+
 h1 {
   margin-bottom: .5rem;
 }
+
 time {
   color: #888;
-  text-decoration: italic;
 }
+
 hr {
   margin-top: 2rem;
-}
-#fn {
-  font-size: 85%;
 }
 
 a {
@@ -40,9 +44,6 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-::selection {
-  background-color: #fff888;
 }
 
 img {
