@@ -1,0 +1,52 @@
+div.post-body {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+/* Code Snippets Begin */
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-justify: inter-word;
+  font: 130% Monospace;
+}
+
+code.text {
+  overflow-x: auto;
+  word-wrap: break-word;
+  text-justify: inter-word;
+  font: 130% Monospace;
+}
+
+strong.num {
+  font-weight: bolder;
+  font-family: Monospace;
+}
+/* Code Snippets End */
+
+/* Lists Begin */
+ul {
+  list-style-type: circle;
+}
+/* Lists End */
+
+
+
+div.disclaimer {
+  font-size: 75%;
+  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+
+pre.bitcoin-script {
+  display: block;
+  white-space: pre;
+}
