@@ -1,0 +1,79 @@
+:root {
+  --main-bg-color: #121111;
+  --main-font-family: Liberation Sans, Arial, sans-serif;
+  --main-txt-color: white;
+  --main-txt-align: justify;
+}
+
+
+* {
+  background-color: var(--main-bg-color);
+  font-family: var(--main-font-family);
+  line-height: 1.5;
+  color: var(--main-txt-color);
+  text-align: var(--main-txt-align);
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  margin-bottom: .5rem;
+}
+time {
+  color: #888;
+  text-decoration: italic;
+}
+hr {
+  margin-top: 2rem;
+}
+#fn {
+  font-size: 85%;
+}
+
+a {
+  color: var(--main-txt-color);
+  text-decoration: none;
+  outline: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+::selection {
+  background-color: #fff888;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lists Begin */
+ul, ol, dl {
+  padding-left: 2rem;
+  list-style-type: none;
+}
+
+ul, li, dt, dd {
+  padding-left: 2rem;
+  line-height: 1.5;
+}
+
+dd {
+  text-transform: uppercase;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1.5rem;
+}
+/* Lists End */
+
