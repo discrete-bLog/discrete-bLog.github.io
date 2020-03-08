@@ -460,7 +460,7 @@ Only the values for the first output are shown, but this logic is applicable to 
 
 The left most column displays the locking script contents, the middle column displays the unlocking script contents, and (remembering that Bitcoin Script is a Forth-like RPN language), the right most column shows how the stack is built.
 
-<pre class="bitcoin-script">
+<pre class="numblock">
 |   Locking Script     |   Unlocking Script |       Script      |
 |                      |                    |                   |
 |   OP_DUP             |   &lt;signature&gt;      |   &lt;signature&gt;     |
@@ -482,7 +482,7 @@ where, for the first output
 
 The script is executed as follows
 
-<pre class="bitcoin-script">
+<pre class="numblock">
 |     Script           |        Stack         |     Processed       |
 |                      |                      |                     |
 |   &lt;signature&gt;        |                      |                     |
@@ -496,7 +496,7 @@ The script is executed as follows
 
 Push the signature and then the public key onto the stack:
 
-<pre class="bitcoin-script">
+<pre class="numblock">
 |     Script           |        Stack         |     Processed       |
 |                      |                      |                     |
 |                      |                      |                     |
@@ -510,7 +510,7 @@ Push the signature and then the public key onto the stack:
 
 <code class="text">OP_DUP</code> duplicates the top stack item, the public key, and pushes to the top of the stack:
 
-<pre class="bitcoin-script">
+<pre class="numblock">
 |     Script            |       Stack         |     Processed       |
 |                       |                     |                     |
 |                       |                     |                     | 
@@ -530,7 +530,7 @@ Push the signature and then the public key onto the stack:
 
 It then pushes that hash to the top of the stack:
 
-<pre class="bitcoin-script">
+<pre class="numblock">
 |     Script            |       Stack         |     Processed       |
 |                       |                     |                     |
 |                       |                     |                     | 
@@ -544,7 +544,7 @@ It then pushes that hash to the top of the stack:
 
 The public key hash is pushed to the top of the stack:
 
-<pre class="bitcoin-script">
+<pre class="numblock">
 |     Script            |       Stack         |     Processed       |
 |                       |                     |                     |
 |                       |                     |                     | 
@@ -560,7 +560,7 @@ The public key hash is pushed to the top of the stack:
 If the two public key hashes are not equal, then the recipient attempting to claim the funds provided an incorrect public key either by accident or maliciously.
 <code class="text">OP_EQUALVERIFY</code> will fail the script and the transaction is invalid if this occurs.
 
-<pre class="bitcoin-script">
+<pre class="numblock">
 |     Script            |       Stack         |     Processed       |
 |                       |                     |                     |
 |                       |                     |                     | 
@@ -579,7 +579,7 @@ If <code class="text">OP_CHECKSIG</code> runs successfully, it pushes a 1 to the
 If the user did not provide a valid signature for the public key, the <code class="text">OP_CHECKSIG</code> pushes 0 to the stack, indicating the transaction is invalid.
 
 
-<pre class="bitcoin-script">
+<pre class="numblock">
 |     Script            |       Stack         |     Processed       |
 |                       |                     |                     |
 |                       |                     |                     | 
