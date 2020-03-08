@@ -1,0 +1,28 @@
+.timestamp {
+  color: #b6f2cf;
+}
+
+span.timestamp, span.ext, span.record-type, span.sub-type {
+  font-size: 100%;
+}
+
+.ext {
+  color: #faf482;
+}
+
+.record-type {
+  color: #fa8282;
+}
+
+.sub-type {
+  color: #8286fa;
+}
+
+.hexdump {
+  display: block;
+  white-space: pre;
+}
+
+dd.mrt {
+  text-transform: none;
+}

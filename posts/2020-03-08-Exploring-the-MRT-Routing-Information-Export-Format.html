@@ -1,0 +1,52 @@
+<link rel="stylesheet" type="text/css" href="../assets/css/index.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../assets/css/post.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../assets/css/mrt.css" media="screen">
+
+
+
+<div class="post-body">
+	<h1><a href="../index.html">discrete bLog</a></h1>
+	<h2>Exploring the MRT Routing Information Export Format</h2>
+	<p class="author"><time datetime="2020-03-08 00:00">2020-03-08</time>  -  Rachel Rybarczyk</p>
+
+	<!-- RR TODO: INTRO -->
+	The Multi-Threaded Routing Toolkit (MRT) Routing Information Export Format is defined in <a href="https://tools.ietf.org/html/rfc6396#section-2">RFC6396</a> and can be used "to export routing protocol messages, state changes, and routing information base contents".
+
+
+	<h3>MRT Header</h3>
+	The MRT extended header format is
+	<dl>
+		<dt> Timestamp (4 bytes)</dt>
+    <dd class="mrt timestamp">Epoch time stamp <br>
+      0x5e651680, 1583683200, <time  class="timestamp" datetime="2020-03-08 16:00">2020-03-08 16:00 UTC</time></dd>
+
+		<dt>Extended Flag (1 byte)</dt>
+    <dd class="mrt"> Indicates this is the extended header format. <br>
+    <dd class="mrt ext"> 0x00, 00 </dd>
+
+		<dt>Type (1 byte)</dt>
+			<dd class="mrt record-type">0x0d, 13, indicates </dd>
+
+		<dt>SubType (2 bytes)</dt>
+			<dd class="mrt sub-type">0x0001, 1, indicates </dd>
+	</dl>
+
+
+	<pre class="bitcoin-script">
+┌────────┬─────────────────────────┬─────────────────────────┬────────┬────────┐
+│00000000│ <span class="timestamp text">5e 65 16 80</span> <span class="ext text">00</span> <span class="record-type text">0d</span> <span class="sub-type text">00 01</span> ┊ 00 00 04 4b d9 1d 42 06 │^e•×0_0•┊00•K×•B•│
+│00000010│ 00 00 00 3b 03 b9 15 18 ┊ 41 20 01 07 f8 00 0b 01 │000;•×••┊A ••×0••│
+│00000020│ 00 01 d1 a5 19 93 24 00 ┊ 23 00 03 0a 9c 03 b9 3a │0•××•×$0┊#0•_×•×:│
+│00000030│ 05 04 20 01 07 f8 00 0b ┊ 01 00 01 d1 a5 20 19 50 │•• ••×0•┊•0•×× •P│
+	</pre>
+
+
+
+	<h3>Peer Index Table</h3>
+
+	<h3>Peer Entries</h3>
+
+	<h3>RIB IPV4/IPV6 Unicast</h3>
+
+</div>
+
