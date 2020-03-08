@@ -59,9 +59,13 @@ img {
 }
 
 /* Lists Begin */
-ul, ol, dl {
+ul, dl {
   margin-left: 150px;
   list-style-type: none;
+}
+
+ol {
+  margin-left: 150px;
 }
 
 ul, li, dt, dd {

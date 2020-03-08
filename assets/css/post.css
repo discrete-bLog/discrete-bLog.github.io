@@ -15,19 +15,22 @@ pre {
   margin-left: 100px;
   margin-right: 100px;
   text-justify: inter-word;
+  font-family: Courier New, Courier, Monospace;
   font: 130% Monospace;
 }
 
-code.text {
+.text {
   overflow-x: auto;
   word-wrap: break-word;
   text-justify: inter-word;
-  font: 130% Monospace;
+  font-family: Monospace;
+  font: 140% Monospace;
 }
 
 strong.num {
   font-weight: bolder;
   font-family: Monospace;
+  font: 130% Monospace;
 }
 /* Code Snippets End */
 
@@ -49,4 +52,12 @@ div.disclaimer {
 pre.bitcoin-script {
   display: block;
   white-space: pre;
+}
+
+.lowlight {
+  color: #888;
+}
+
+.highlight {
+  color: var(--main-txt-color);
 }

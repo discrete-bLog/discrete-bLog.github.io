@@ -87,12 +87,12 @@ A complete signed P2PKH Bitcoin transaction is discussed in detail below.
 This transaction was randomly chosen from Blockchain.com and can be viewed <a href="https://www.blockchain.com/en/btc/tx/e65ad475a01384b086ce0d04199835fdd580739422ece1e0f1c4e362d43735d9" target="_blank">here</a> (<a href="https://blockchain.info/rawtx/e65ad475a01384b086ce0d04199835fdd580739422ece1e0f1c4e362d43735d9" target="_blank">raw values</a>).
 </p>
 
-From a UTXO with a value of 17,373,066 address <code class="text">19iy8HKpG5EbsqB2GUNVPUDbQxiTrPXpsx</code> sends 390,582 satoshis to <code class="text">1JKRgG4F7k1b7PbAhQ7heEuV5aTJDpK9TS</code> and receives 16,932,484 satoshis back as change.
+From a UTXO with a value of <code class="text">17,373,066</code> address <code class="text">19iy8HKpG5EbsqB2GUNVPUDbQxiTrPXpsx</code> sends <code class="text">390,582</code> satoshis to <code class="text">1JKRgG4F7k1b7PbAhQ7heEuV5aTJDpK9TS</code> and receives <code class="text">16,932,484</code> satoshis back as change.
 The remaining delta between the inputs and outputs go to the miner as a transaction processing fee.
 
 <h2> Version Number </h2>
 
-<pre>
+<pre class="lowlight">
 <strong class="num">01000000</strong>019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000
 </pre>
 
@@ -100,7 +100,7 @@ The version number is four bytes long and is expressed as a hexadecimal value in
 There are two version types.
 Version 01 indicates that there is no relative time lock.
 Version 02 indicates that there may be a relative time lock.
-Version 02 was introduced in <a href="https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki" target="_blank">BIP0068</a> which added <code>OP_CHECKSEQUENCEVERIFY</code> along with <a href="https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki#Bidirectional_Payment_Channels" target="_blank">BIP0112</a> which upgraded it.
+Version 02 was introduced in <a href="https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki" target="_blank">BIP0068</a> which added <code class="text">OP_CHECKSEQUENCEVERIFY</code> along with <a href="https://github.com/bitcoin/bips/blob/master/bip-0112.mediawiki#Bidirectional_Payment_Channels" target="_blank">BIP0112</a> which upgraded it.
 Version 02 is used in conjunction with the sequence number which is described below.
 
 <p>
@@ -109,7 +109,7 @@ The example transaction is version 01.
 
 <h2> Transaction Input </h2>
 
-<pre>
+<pre class="lowlight">
 01000000<strong class="num">019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff</strong>02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000
 </pre>
 
@@ -118,7 +118,7 @@ If the unlocking script in the current transaction input meets the conditions se
 
 <h3> Number of Outpoints </h3>
 
-<pre>
+<pre class="lowlight">
 01000000<strong class="num">01</strong>9c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000
 </pre>
 
@@ -129,7 +129,7 @@ The example transaction as 1 UTXO as an input.
 
 <h2> Transaction Outpoint </h2>
 
-<pre>
+<pre class="lowlight">
 0100000001<strong class="num">9c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c4801000000</strong>6a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000
 </pre>
 
@@ -138,39 +138,39 @@ Each outpoint is a reference to a previous transaction hash and a corresponding 
 The first 32 bytes of the outpoint is the reference to the previous transaction hash containing the UTXO being consumed in little endian format.
 For example, the previous transaction hash is:
 
-<pre>
+<pre class="lowlight">
 486c887f2378feb1ea3cdc054cb7b6722e632ab1edac962a00723ea0240f2e9c
 </pre>
 
 and when it is included in the transaction outpoint, it expressed in little endian format (reverse byte order):
 
-<pre>
+<pre class="lowlight">
 01<strong class="num">9c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48</strong>01000000
 </pre>
 
 The last four bytes of the outpoint define the index of which UTXO of the previous transaction is being consumed.
 It is also expressed has a hexadecimal value in little endian format.
 
-<pre>
+<pre class="lowlight">
 019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48<strong class="num">01000000</strong>
 </pre>
 
 The transaction containing the UTXO being spent can be viewed <a href="http://486c887f2378feb1ea3cdc054cb7b6722e632ab1edac962a00723ea0240f2e9c/" target="_blank">here</a> <a href="https://blockchain.info/rawtx/486c887f2378feb1ea3cdc054cb7b6722e632ab1edac962a00723ea0240f2e9c" target="_blank">raw values</a>).
-The first entry in the previous transaction's "out" key shows that a UTXO containing a decimal value 17,373,066 satoshi is being consumed in the current transaction.
-Note that the current transaction does not explicitly include the 17,373,066 satoshis UTXO, only the reference to it via the outpoint contents.
+The first entry in the previous transaction's "out" key shows that a UTXO containing a decimal value <code class="text">17,373,066</code> satoshi is being consumed in the current transaction.
+  Note that the current transaction does not explicitly include the <code class="text">17,373,066</code> satoshis UTXO, only the reference to it via the outpoint contents.
 
 
 <h2> Unlocking Script </h2>
 
 The unlocking script, also called scriptSig, contains the stack script (signature) and redeem script (public key) of the user building the transaction and receiving the funds.
 
-<pre>
+<pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c4801000000<strong class="num">6a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34e</strong>ffffffff02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000
 </pre>
 
 <h3> Unlocking Script Length </h3>
 
-<pre>
+<pre class="lowlight">
 <strong class="num">6a</strong>47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b330701
 </pre>
 
@@ -179,7 +179,7 @@ In this case, the first byte (0x6a) declares that the next 106 bytes are pushed 
 
 <h3> Stack Script (Signature) </h3>
 
-<pre>
+<pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a<strong class="num">47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b33</strong>07012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000
 </pre>
 
@@ -188,14 +188,14 @@ It is part of the proof that confirms the user (signer) is allowed to spend the 
 
 The first 1–9 bytes is of type VarInt and the defines the number of succeeding bytes that comprise the signature.
 
-<pre>
+<pre class="lowlight">
 <strong class="num">47</strong>304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b330701
 </pre>
 
 In this case, the first byte (0x47) declares that the next 71 bytes are the signature and sighash.
 The signature is derived from the users private key.
 
-<pre>
+<pre class="lowlight">
 47<strong class="num">304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307</strong>01
 </pre>
 
@@ -228,13 +228,13 @@ In a P2PKH transaction, the sighash flag could be one of the following:
     <li style="list-style-type:none"> <code class="text">SIGHASH_ANYONECANPAY</code> combined with <code class="text">SIGHASH_SINGLE, (0x83)</code>: the signature applies to one input and one output </li>
 </ul>
 
-<pre>
+<pre class="lowlight">
 47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307<strong class="num">01</strong>
 </pre>
 
 <h3> Redeem Script </h3>
 
-<pre>
+<pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b330701<strong class="num">2102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34e</strong>ffffffff02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000
 </pre>
 
@@ -243,7 +243,7 @@ In P2PKH transactions, the redeem script is just the public key of the user (sig
 
 The first 1–9 bytes of the redeem script of type VarInt and the defines the number of succeeding bytes that comprise the public key hash.
 
-<pre>
+<pre class="lowlight">
 <strong class="num">21</strong>02c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34e
 </pre>
 
@@ -251,13 +251,13 @@ In this case, the first byte (0x21) declares that the next 33 bytes are the user
 The hashing algorithm is a <code class="text">HASH160</code> which is a <code class="text">SHA256</code> followed by a <code class="text">RIPEMD160</code> hash.
 The public key is derived from the user's private key.
 
-<pre>
+<pre class="lowlight">
 21<strong class="num">02c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34e</strong>
 </pre>
 
 <h2> Sequence Number (nSequence) </h2>
 
-<pre>
+<pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34e<strong class="num">ffffffff</strong>02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000
 </pre>
 
@@ -284,10 +284,10 @@ In <a href="https://github.com/bitcoin/bips/blob/master/bip-0068.mediawiki" targ
 This functionality is realized if and only if the transaction is version 02.
 <br></br>
 
-nSequence is essentially a duration of time that must pass for the transaction to be confirmed and is specified via block height or in sets of <code>2⁹ (512)</code> seconds from the current time.
+nSequence is essentially a duration of time that must pass for the transaction to be confirmed and is specified via block height or in sets of <code class="text">2⁹ (512)</code> seconds from the current time.
 <br></br>
 
-A relative time locked transaction is invalid until <code>(nSequence * 521 seconds)</code> or <code>(nSequence * number of blocks)</code> after its parents transaction(s) are confirmed.
+A relative time locked transaction is invalid until <code class="text">(nSequence * 521 seconds)</code> or <code class="text">(nSequence * number of blocks)</code> after its parents transaction(s) are confirmed.
 <br></br>
 
 18 of the 32 bits of the nSequence value are used for relative time locks. The remaining 14 bits are reserved for future upgrades, as shown below:
@@ -300,14 +300,14 @@ A relative time locked transaction is invalid until <code>(nSequence * 521 secon
 <strong class="num">V</strong> Bits 15-0: Value. Number of blocks or 2⁹ second sets
 </pre>
 
-A comprehensive explanation of time locks can be found [here](https://prestwi.ch/bitcoin-time-locks/).
+A comprehensive explanation of time locks can be found <a href="https://prestwi.ch/bitcoin-time-locks/" target="_blank">here</a>.
 
-The example transaction is version 01 with a sequence number of `0xFFFFFFF`, opting out of RBF and disabling the use of nLockTime.
+The example transaction is version 01 with a sequence number of <code class="text">0xFFFFFFF</code>, opting out of RBF and disabling the use of nLockTime.
 
 
 <h2> Transaction Outputs </h2>
 
-<pre>
+<pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff<strong class="num">02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac</strong>00000000
 </pre>
 
@@ -319,7 +319,7 @@ Each output contains the amount, in satoshis, being consumed and the conditions 
 
 <h3> Number of Outputs </h3>
 
-<pre>
+<pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff**02**b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000
 </pre>
 
@@ -330,13 +330,13 @@ In this transaction there are two outputs, one for the amount being spent from t
 
 <h3> Outputs </h3>
 
-<pre>
+<pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff02<strong class="num">b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac</strong>00000000
 </pre>
 
 The first 16 bytes of each output represents the amount being consumed as dictated by the unlocking (detailed below) and expressed as a hexadecimal value in little endian format.
 
-<pre>
+<pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff02<strong class="num">b6f5050000000000</strong>1976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac<strong class="num">845e020100000000</strong>1976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000
 </pre>
 
@@ -344,28 +344,28 @@ The second part of the output is a variable length value called the locking scri
 The locking script defines the conditions in which the specified can be consumed.
 In other words it only lets the user with the correct signature access the funds.
 
-<pre>
+<pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff02b6f5050000000000<strong class="num">1976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac</strong>845e020100000000<strong class="num">1976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000</strong>
 </pre>
 
-This P2PKH transaction is consuming a UTXO previous controlled by the address <strong class="num">19iy8HKpG5EbsqB2GUNVPUDbQxiTrPXpsx</strong> with the value of 17,373,066 satoshis.
-The first output of this transaction creates a new UTXO with the value of 390,582 satoshi that is controlled by receiving address, <code class="text">1JKRgG4F7k1b7PbAhQ7heEuV5aTJDpK9TS</code>.
+This P2PKH transaction is consuming a UTXO previous controlled by the address <strong class="num">19iy8HKpG5EbsqB2GUNVPUDbQxiTrPXpsx</strong> with the value of <code class="text">17,373,066</code> satoshis.
+The first output of this transaction creates a new UTXO with the value of <code class="text">390,582</code> satoshi that is controlled by receiving address, <code class="text">1JKRgG4F7k1b7PbAhQ7heEuV5aTJDpK9TS</code>.
 
-The second output of this transaction creates a new UTXO with the value of 16,932,484 satoshis that is controlled by the original sending address, <code class="text">19iy8HKpG5EbsqB2GUNVPUDbQxiTrPXpsx</code>.
+The second output of this transaction creates a new UTXO with the value of <code class="text">16,932,484</code> satoshis that is controlled by the original sending address, <code class="text">19iy8HKpG5EbsqB2GUNVPUDbQxiTrPXpsx</code>.
 This is the "change" from the transaction.
 
 
 <h4> First Output </h4>
 
-The first output amount in decimal value is 390,582 satoshis (<code class="text">0x0005F5B6</code> hex).
+The first output amount in decimal value is <code class="text">390,582</code> satoshis (<code class="text">0x0005F5B6</code> hex).
 
-<pre>
+<pre class="lowlight">
 <strong class="num">b6f5050000000000</strong>1976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac
 </pre>
 
 The locking script is derived from the address of the user receiving the funds.
 
-<pre>
+<pre class="lowlight">
 b6f5050000000000<strong class="num">1976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac</strong>
 </pre>
 
@@ -383,27 +383,27 @@ The locking script is derived from the address of the person receiving the funds
     <li style="list-style-type:none"> <code class="text">a9</code>: <code class="text">OP_HASH160</code>, the input is hashed twice: first with <code class="text">SHA-256</code> and then with <code class="text">RIPEMD-160</code> </li>
     <li style="list-style-type:none"> <code class="text">14</code>: (20 bytes) length of the following public key hash </li>
     <li style="list-style-type:none"> <code class="text">bdf63990d6dc33d705b756e13dd135466c06b3b5</code>: public key hash of funds receiver </li>
-    <li style="list-style-type:none"> <code class="text">88</code>: <code class="text">OP_EQUALVERIFY</code>, returns 1 if the inputs are exactly equal, 0 otherwise. Then runs OP_VERIFY which fails and marks the transaction as invalid of the top stack value is false </li>
+    <li style="list-style-type:none"> <code class="text">88</code>: <code class="text">OP_EQUALVERIFY</code>, returns 1 if the inputs are exactly equal, 0 otherwise. Then runs <code class="text">OP_VERIFY</code> which fails and marks the transaction as invalid of the top stack value is false </li>
     <li style="list-style-type:none"> <code class="text">ac</code>: <code class="text">OP_CHECKSIG</code>, the entire transaction's outputs, inputs, and script are hashed. The signature used by <code class="text">OP_CHECKSIG</code> must be a valid signature for this hash and public key. If it is, 1 is returned, 0 otherwise </li>
 </ul>
 
 
 <h4> Second Output </h4>
 
-<pre>
+<pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e020100000000<strong class="num">1976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac</strong>00000000
 </pre>
 
-The second output value is 16,932,484 satoshi.
+The second output value is <code class="text">16,932,484</code> satoshi.
 
-<pre>
+<pre class="lowlight">
 <strong class="num">845e020100000000</strong>1976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac
 </pre>
 
-The locking script for the second output sends 16,932,484 satoshi back to the sender.
+The locking script for the second output sends <code class="text">16,932,484</code> satoshi back to the sender.
 This is the sender's change.
 
-<pre>
+<pre class="lowlight">
 845e020100000000<strong class="num">1976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac</strong>
 </pre>
 
@@ -415,7 +415,7 @@ The locking script can be broken down as follows
     <li style="list-style-type:none"><code class="text">a9</code>: <code class="text">OP_HASH160</code>, the input is hashed twice: first with SHA-256 and then with RIPEMD-160. </li>
     <li style="list-style-type:none"><code class="text">14</code>: (20 bytes) length of the following public key hash </li>
     <li style="list-style-type:none"><code class="text">5fb0e9755a3424efd2ba0587d20b1e98ee29814a</code>, public key hash of funds receiver </li>
-    <li style="list-style-type:none"><code class="text">88</code>: <code class="text">OP_EQUALVERIFY</code>, returns 1 if the inputs are exactly equal, 0 otherwise. Then runs OP_VERIFY which fails and marks the transaction as invalid of the top stack value is false </li>
+    <li style="list-style-type:none"><code class="text">88</code>: <code class="text">OP_EQUALVERIFY</code>, returns 1 if the inputs are exactly equal, 0 otherwise. Then runs <code class="text">OP_VERIFY</code> which fails and marks the transaction as invalid of the top stack value is false </li>
     <li style="list-style-type:none"><code class="text">ac</code>: <code class="text">OP_CHECKSIG</code>, the entire transaction's outputs, inputs, and script are hashed. The signature used by <code class="text">OP_CHECKSIG</code> must be a valid signature for this hash and public key. If it is, 1 is returned, 0 otherwise </li>
 </ul>
 
@@ -424,7 +424,7 @@ The locking script can be broken down as follows
 The transaction fee that goes to the miner is the delta between the total input and output amounts.
 In the example transaction, the miner fee is calculated as:
 
-<pre>
+<pre class="lowlight">
 miner_fee = (input_amount) - (spend_amount + change_amount)
 miner_fee = (17373066) - (390582 + 16932484)
 miner_fee = 50000 satoshi
@@ -433,7 +433,7 @@ miner_fee = 50000 satoshi
 
 <h2> Locktime (nLockTime) </h2>
 
-<pre>
+<pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff02b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac0<strong class="num">0000000</strong>
 </pre>
 
