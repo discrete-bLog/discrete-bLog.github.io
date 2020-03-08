@@ -4,7 +4,10 @@ div.post-body {
 }
 
 
-/* Code Snippets Begin */
+/*****************************/
+/* Code Snippets Styling Begin */
+
+/* Wrap text (no scrolling) on resize */
 pre {
   overflow-x: auto;
   white-space: pre-wrap;
@@ -19,6 +22,13 @@ pre {
   font: 130% Monospace;
 }
 
+/* Scrolls text (no wrapping) on resize */
+pre.numblock{
+  display: block;
+  white-space: pre;
+}
+
+/* Code Style in line with paragraph text */
 .text {
   overflow-x: auto;
   word-wrap: break-word;
@@ -27,40 +37,39 @@ pre {
   font: 140% Monospace;
 }
 
+
+/* Make bold some parts of code snippets */
 strong.num {
   font-weight: bolder;
   font-family: Monospace;
   font: 130% Monospace;
 }
-/* Code Snippets End */
 
-/* Lists Begin */
+/* In code snippet pre tags, make less important characters gray */
+.lowlight {
+  color: #888;
+}
+
+/* In code snippet pre tags, make more important characters the main text color */
+.highlight {
+  color: var(--main-txt-color);
+}
+
+
+/* Code Snippets Styling End */
+/*****************************/
+
 ul {
   list-style-type: circle;
 }
-/* Lists End */
 
-
-
+/* For any small notes */
 div.disclaimer {
   font-size: 75%;
   margin-bottom: 30px;
   margin-bottom: 10px;
 }
 
-
-pre.numblock{
-  display: block;
-  white-space: pre;
-}
-
-.lowlight {
-  color: #888;
-}
-
-.highlight {
-  color: var(--main-txt-color);
-}
 
 img {
   display: block;
