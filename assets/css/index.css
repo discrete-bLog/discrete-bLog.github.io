@@ -50,42 +50,34 @@ a:hover {
   text-decoration: underline;
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Lists Begin */
-ul, dl {
+/* List Styling Begin */
+ul.landing, dl.landing {
   margin-left: 150px;
   list-style-type: none;
 }
 
-ol {
+ol.landing {
   margin-left: 150px;
 }
 
-ul, li, dt, dd {
+ul.landing, li.landing, dt.landing, dd.landing {
   line-height: 1.5;
 }
 
-dd {
+dd.landing {
   text-transform: uppercase;
   font-size: 75%;
   color: #888;
 }
 
-dt {
+dt.landing {
   font-weight: bold;
 }
 
-dd {
+dd.landing {
   margin-bottom: 1.5rem;
 }
-/* Lists End */
+/* List Styling End */
 
 p.author {
   text-transform: uppercase;
