@@ -50,14 +50,6 @@ a:hover {
   text-decoration: underline;
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: auto;
-}
-
 /* Lists Begin */
 ul, dl {
   margin-left: 150px;
