@@ -1,25 +1,28 @@
-<!DOCTYPE html>
-<html lang="en-US">
+---
+layout: default
+---
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>discrete bLog</title>
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
 
-    <meta name="author" content="Rachel Rybarczyk">
-    <meta name="description" content="A place to put our thoughts">
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css" media="screen">
-  </head>
+      <h4> by
+          {% for author in post.authors %}
+            {{ author }}
+            {% if author != post.authors.last %}
+             and
+            {% endif %}
+          {% endfor %}
+          on {{ post.date | date: "%B %e, %Y" }}
+        </h4>
 
-  <body>
-    <h1 class="landing">discrete bLog</h1>
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
 
-    <h2 class="landing">Latest Posts</h2>
-
-    <dl class="landing">
-      <dt class="landing"><a href="posts/2020-01-19-Bitcoin-P2PKH-Transaction-Breakdown.html">Bitcoin P2PKH Transaction Breakdown</a></dt>
-        <dd class="landing"><p class="author"><time datetime="2020-01-19 00:00">2020-01-19</time>  -  Rachel Rybarczyk</p></dd>
-    </dl>
-  </body>
-</html>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>

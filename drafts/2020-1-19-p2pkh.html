@@ -1,16 +1,16 @@
-<link rel="stylesheet" type="text/css" href="../assets/css/index.css" media="screen">
-<link rel="stylesheet" type="text/css" href="../assets/css/post.css" media="screen">
-
-
-
-<div class="post-body">
-<h1><a href="../index.html">discrete bLog</a></h1>
-<h2>Bitcoin P2PKH Transaction Breakdown</h2>
-<p class="author"><time datetime="2020-01-19 00:00">2020-01-19</time>  -  Rachel Rybarczyk</p>
-
-
+---
+layout: post
+title: Bitcoin P2PKH Transaction Breakdown
+authors: [Rachel Rybarzcyk]
+---
 The goal of this post is to give a thorough introduction to the most common type of Bitcoin transactions, <em>Pay-to-Public-Key-Hash</em> (P2PKH).
-To achieve this, the following is presented:
+<br></br>
+
+<link rel="stylesheet" type="text/css" href="/assets/css/index.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/assets/css/post.css" media="screen">
+<div class="post-body">
+
+    To achieve this, the following is presented:
 
 
 <ul>
@@ -23,7 +23,7 @@ To achieve this, the following is presented:
 A P2PKH transaction is the type of transactions that most people make when they move a specified amount of Bitcoin from one address to another usually via a wallet interface.
 An example transaction is used to clearly demonstrate part of what is going on behind the scenes of an average wallet.
 
-<h2>Unspent Transaction Outputs (UTXOs)</h2>
+<h2>Unspent Transaction Outputs (UTXOs)</h2>
 A very important concept to understand before diving into the transaction breakdown is that of an unspent transaction output or UTXO.
 In a Bitcoin transaction, UTXOs are what is being consumed, or spent.
 A UTXO can only be spent once. After it is spent it is then referred to as a spent transaction output.
@@ -40,7 +40,7 @@ In this analogy the incinerated $20 bill started as a UTXO but once it was consu
 
 All the Bitcoin available for consumption on the network are referred to as the <em>UTXO set</em>.
 
-<h2> Transaction Building Process </h2>
+<h2> Transaction Building Process </h2>
 Each transaction consists of the <em>version number</em>, <em>input</em>, <em>output</em>, and <em>locktime</em>.
 
 <br></br>
@@ -317,7 +317,7 @@ In a typical P2PKH a transaction has an output containing the spend output and t
 Each output contains the amount, in satoshis, being consumed and the conditions that must be met in order to spend them.
 
 
-<h3> Number of Outputs </h3>
+<h3> Number of Outputs </h3>
 
 <pre class="lowlight">
 01000000019c2e0f24a03e72002a96acedb12a632e72b6b74c05dc3ceab1fe78237f886c48010000006a47304402203da9d487be5302a6d69e02a861acff1da472885e43d7528ed9b1b537a8e2cac9022002d1bca03a1e9715a99971bafe3b1852b7a4f0168281cbd27a220380a01b3307012102c9950c622494c2e9ff5a003e33b690fe4832477d32c2d256c67eab8bf613b34effffffff**02**b6f50500000000001976a914bdf63990d6dc33d705b756e13dd135466c06b3b588ac845e0201000000001976a9145fb0e9755a3424efd2ba0587d20b1e98ee29814a88ac00000000
@@ -453,7 +453,7 @@ It is important to note that if nSequence is set to <code class="text">0xFFFFFFF
 The example transaction has a nLockTime that is 0.
 
 
-<h2> Unlocking the Locking Script </h2>
+<h2> Unlocking the Locking Script </h2>
 
 Below shows how the locking and unlocking scripts work together to unlock the funds in a P2PKH output.
 Only the values for the first output are shown, but this logic is applicable to both outputs.
