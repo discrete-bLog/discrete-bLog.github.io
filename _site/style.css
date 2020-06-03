@@ -65,7 +65,7 @@ html {
 
 body {
   background: #fff;
-  font: 18px/1.4 Helvetica, Arial, sans-serif;
+  font: 15px/1.4 Helvetica, Arial, sans-serif;
   color: #333;
 }
 
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 23px;
 }
 
 h1 a {
@@ -100,15 +100,15 @@ h1 a {
 }
 
 h2 {
-  font-size: 24px;
-}
-
-h3 {
   font-size: 20px;
 }
 
+h3 {
+  font-size: 17px;
+}
+
 h4 {
-  font-size: 18px;
+  font-size: 14px;
   color: #666;
 }
 
@@ -243,7 +243,7 @@ img {
   cursor: pointer;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 22px;
   letter-spacing: 1px;
 }
 
